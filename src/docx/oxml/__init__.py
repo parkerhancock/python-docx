@@ -237,3 +237,21 @@ register_element_cls("w:spacing", CT_Spacing)
 register_element_cls("w:tab", CT_TabStop)
 register_element_cls("w:tabs", CT_TabStops)
 register_element_cls("w:widowControl", CT_OnOff)
+
+# ------------------------------------------------------------------
+# from bayoo-docx
+
+from .comments import CT_Comments,CT_Com, CT_CRE, CT_CRS, CT_CRef
+register_element_cls('w:comments', CT_Comments)
+register_element_cls('w:comment', CT_Com)
+register_element_cls('w:commentRangeStart', CT_CRS)
+register_element_cls('w:commentRangeEnd', CT_CRE)
+register_element_cls('w:commentReference', CT_CRef)
+
+
+from .footnotes import CT_Footnotes, CT_Footnote, CT_FNR, CT_FootnoteRef
+
+register_element_cls('w:footnotes', CT_Footnotes)
+register_element_cls('w:footnote', CT_Footnote)
+register_element_cls('w:footnoteReference', CT_FNR)
+register_element_cls('w:footnoteRef', CT_FootnoteRef)
